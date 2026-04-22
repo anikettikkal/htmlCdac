@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 25px 30px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: orangered;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-top: 8px;
+        }
+
+        .radio-group input,
+        .checkbox-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: orangered;
+            color: white;
+        }
+        .submit-btn:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+        .reset-btn {
+            background-color: yellow;
+        }
+        .reset-btn:hover {
+            background-color: orangered;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h2>Feedback Form</h2>
+
+    <form>
+        <!-- Name -->
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <!-- Category Dropdown -->
+        <label>Category:</label>
+        <select>
+            <option>Select Category</option>
+            <option>Website</option>
+            <option>Service</option>
+            <option>Support</option>
+        </select>
+
+        <!-- Rating Radio -->
+        <label>Rating:</label>
+        <div class="radio-group">
+            <input type="radio" name="rating"> Excellent
+            <input type="radio" name="rating"> Good
+            <input type="radio" name="rating"> Average
+            <input type="radio" name="rating"> Poor
+        </div>
+
+        <!-- Comments -->
+        <label>Comments:</label>
+        <textarea rows="4" placeholder="Write your feedback"></textarea>
+
+        <!-- Checkbox -->
+        <div class="checkbox-group">
+            <input type="checkbox" required> I agree to terms & conditions
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
